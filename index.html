@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<!-- saved from url=(0029)https://kendrickho.github.io/ -->
-<html lang="zh-Hant"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="廬江何氏族譜網站，整理廬江何氏（香港西貢南山一脉）相關族譜文獻。">
   <title>廬江何氏族譜</title>
   <style>
     :root {
-      --bg: #f7f4ee;
-      --card: #fffdf9;
-      --text: #222222;
-      --muted: #666666;
-      --line: #ddd6c8;
-      --accent: #7a4b2a;
-      --accent-hover: #5f391f;
+      --bg: #f7f4ee; --card: #fffdf9; --text: #222222;
+      --muted: #666666; --line: #ddd6c8;
+      --accent: #7a4b2a; --accent-hover: #5f391f;
     }
 
-    * { box-sizing: border-box; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1610; --card: #201d18; --text: #e8e0d0;
+        --muted: #9a9080; --line: #3a3228;
+        --accent: #c4885a; --accent-hover: #d9a070;
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      margin: 0;
-      font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.8;
       font-size: 20px;
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
     }
 
     .wrap {
@@ -39,7 +49,6 @@
     }
 
     h1 {
-      margin: 0;
       font-size: 2.4rem;
       line-height: 1.3;
       text-align: center;
@@ -54,8 +63,27 @@
     }
 
     h2 {
-      margin-top: 0;
+      margin-bottom: 12px;
       font-size: 1.4rem;
+    }
+
+    .panel p {
+      color: var(--muted);
+      font-size: 0.95em;
+      line-height: 1.8;
+    }
+
+    .panel p + p {
+      margin-top: 10px;
+    }
+
+    .panel a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .panel a:hover {
+      color: var(--accent-hover);
     }
 
     .buttons {
@@ -83,38 +111,25 @@
       background: var(--accent-hover);
     }
 
-    footer {
-      max-width: 900px;
-      margin: 24px auto 40px auto;
-      padding: 0 24px;
-    }
-
-    .footer-panel {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 20px 24px;
-      color: var(--muted);
-      font-size: 0.95em;
-      line-height: 1.8;
+    .panel-contact {
       text-align: center;
     }
 
-    .footer-panel p {
-      margin: 0 0 10px 0;
+    .panel-contact h2 {
+      font-size: 1.1rem;
     }
 
-    .footer-panel p:last-child {
-      margin-bottom: 0;
+    .panel-contact p {
+      font-size: 0.88em;
     }
 
-    .footer-panel a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .footer-panel a:hover {
-      color: var(--accent-hover);
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--line);
+      margin-top: 24px;
     }
 
     @media (max-width: 700px) {
@@ -127,7 +142,7 @@
 <body>
   <header>
     <div class="wrap">
-      <h1>廬江何氏族譜文獻</h1>
+      <h1>廬江何氏族譜</h1>
     </div>
   </header>
 
@@ -145,13 +160,13 @@
         <a class="button" href="hogenealogy-scan.html">文獻影像</a>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="footer-panel">
+    <section class="panel panel-contact">
       <p>如有意見或問題，可聯絡<a href="mailto:kendrickho@gmail.com">本人</a></p>
       <p>網站最後更新日期：2026年5月</p>
-    </div>
-  </footer>
+    </section>
+  </main>
 
-</body></html>
+  <footer>廬江何氏族譜</footer>
+</body>
+</html>

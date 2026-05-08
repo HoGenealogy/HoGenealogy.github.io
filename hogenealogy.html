@@ -31,13 +31,15 @@
     .original-text p { text-indent: 2em; }
     .back-link { display: inline-block; margin-top: 8px; color: var(--accent); text-decoration: none; font-weight: bold; }
     .back-link:hover { color: var(--accent-hover); }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 0.95rem; }
-    thead th { background: var(--line); color: var(--text); font-weight: bold; padding: 10px 12px; text-align: center; border: 1px solid var(--line); }
-    tbody td { padding: 9px 12px; border: 1px solid var(--line); vertical-align: top; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 24px; }
+    table { width: 100%; min-width: 580px; border-collapse: collapse; font-size: 0.95rem; }
+    thead th { background: var(--line); color: var(--text); font-weight: bold; padding: 10px 12px; text-align: center; border: 1px solid var(--line); white-space: nowrap; }
+    tbody td { padding: 9px 12px; border: 1px solid var(--line); vertical-align: middle; }
     tbody tr:nth-child(even) { background: var(--bg); }
     tbody td:first-child { text-align: center; white-space: nowrap; }
     tbody td:nth-child(2) { white-space: nowrap; }
     tbody td:nth-child(3), tbody td:nth-child(4) { text-align: center; white-space: nowrap; }
+    tbody td:nth-child(5) { min-width: 160px; }
     .est { color: var(--est); }
     .online { color: var(--online); }
     .legend { display: flex; gap: 24px; flex-wrap: wrap; font-size: 0.88rem; margin-bottom: 20px; }
@@ -47,7 +49,7 @@
     .legend-dot.online { background: var(--online); }
     .note-section { font-size: 0.88rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 8px; }
     .note-section p { margin-bottom: 8px; }
-    @media (max-width: 700px) { body { font-size: 18px; } h1 { font-size: 1.9rem; } h2 { font-size: 1.3rem; } table { font-size: 0.82rem; } thead th, tbody td { padding: 7px 6px; } .legend { gap: 14px; } }
+    @media (max-width: 700px) { body { font-size: 18px; } h1 { font-size: 1.9rem; } h2 { font-size: 1.3rem; } table { font-size: 0.85rem; } thead th, tbody td { padding: 8px 8px; } .legend { gap: 14px; } }
   </style>
 </head>
 <body>
@@ -74,6 +76,7 @@
         <span><span class="legend-dot" style="background:var(--text);opacity:.6;"></span>族譜記載</span>
       </div>
 
+      <div class="table-wrap">
       <table>
         <thead>
           <tr>
@@ -141,7 +144,7 @@
           </tr>
           <tr>
             <td>十世祖</td><td>何通海一郎</td>
-            <td><span class="est">~1221</span>（辛巳）</span></td>
+            <td><span class="est">~1221（辛巳）</span></td>
             <td>—</td>
             <td></td>
           </tr>
@@ -231,6 +234,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
 
       <div class="note-section">
         <p><strong>寧化石壁：</strong>今福建省寧化縣石壁鎮</p>
